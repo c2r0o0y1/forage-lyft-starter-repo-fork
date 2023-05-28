@@ -10,5 +10,5 @@ class SpinderBattery(Battery):
         self.current_date = current_date
     
     def need_service(self) -> bool:
-        date_which_battery_should_be_serviced_by = self.last_service_date + timedelta(days=365*3)
+        date_which_battery_should_be_serviced_by = self.last_service_date + timedelta(days=365*2)
         return date_which_battery_should_be_serviced_by < self.current_date
